@@ -120,9 +120,6 @@ contract BtcMiner is IERC20 {
         // change status
         minersReward[msg.sender] = 0;
 
-        //_balances
-        _balances[msg.sender] = _balances[msg.sender].add(_reward);
-
         // transfer
         _transfer( address(this), msg.sender, _reward);
     }
